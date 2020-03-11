@@ -72,8 +72,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\힂\source\repos\ConsoleApplication3\glew-2.1.0\include;C:\Users\힂\source\repos\ConsoleApplication3\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\힂\source\repos\ConsoleApplication3\glew-2.1.0\lib\Release\Win32;C:\Users\힂\source\repos\ConsoleApplication3\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\힂\OpenGL_2020\openGL_test\include;C:\Users\힂\OpenGL_2020\openGL_test\glew-2.1.0\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\힂\OpenGL_2020\openGL_test\glew-2.1.0\lib\Release\Win32;C:\Users\힂\OpenGL_2020\openGL_test\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>

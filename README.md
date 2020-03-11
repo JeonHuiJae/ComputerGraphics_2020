@@ -11,3 +11,8 @@
 6. 링커-입력 에서 추가 종속성에 freeglut.lib와 glew32.lib를 추가
 7. 맥용인 것들을 지우고 윈도우용의 주석을 푼다.
 (glew 부분 풀고 gl3.h 삭제, initDisplayMode삭제, glut, glew, wglew include)
+
+
+[실습2_ 점 여러개 찍기]
+
+1. 

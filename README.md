@@ -27,5 +27,15 @@
 5. pos를 불러오는 함수인 glVertexAttribLocation를 통해 변수이름으로 레퍼런스를 가져온다.
 6. glVertexAttribPointer로 포인터 생성(attrib, 개수, 인자형, 자료사이의 거리, offset)
 7. glEnableVertexAttribArray로 해당attrib 활성화.
-
 8. glClear후 glDrawArrays(type, start, pointNum)해주자 
+
+
+[실습3_ 점마다 다른색 입히기]
+
+1. color vector생성
+2. Buffer[2]로 VBO 하나 추가후 vertex와 같이 bind, data채우기
+3. renderScene에서 pos불러왔던것과 같이 a_Color불러와서 pointer생성, 활성화
+4. 이러면 색의 위치로 pos가 가죠? ㅋㄷ
+5. 이 결과의 이유는 buffer[1]이 활성화(bind)되어있어서 이렇게된다.
+6. pos와 color각각 맞춰주려면 해당코드(bind, data)를 renderScene로 데려와야한다.
+7. VertexShader에 out v_Color를 추가하고 a_Color와 연결해주고, FragmentShader에 반드시 같은 이름의 out변수를 만들어준다.

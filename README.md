@@ -17,11 +17,10 @@
 
 1. Vertex 벡터로 찍을 점의 데이터를 만든다. vector<float> vertices{}
 2. VAO와 loadShader함수 사이에 VBO를 만든다gen, bind, data 수행
-  GLuint Buffer;
-  glGenBuffers(1, &Buffer);
-  glBindBuffer(GL_ARRAY_BUFFER, Buffer); 
-  glBufferData(GL_ARRAY_BUFFER, sizeof(float) * vertices.size(), vertices.data(), GL_DYNAMIC_DRAW); 
-
+GLuint Buffer;
+glGenBuffers(1, &Buffer);
+glBindBuffer(GL_ARRAY_BUFFER, Buffer); 
+glBufferData(GL_ARRAY_BUFFER, sizeof(float) * vertices.size(), vertices.data(), GL_DYNAMIC_DRAW); 
 3. MainLoop가 돌아가며 실행되는 renderScene에서 매 회마다 점의 위치가 갱신되도록 만들자.
 4. VertexShader에서 받을 점의 변수pos를 생성. (코드간 공유가 가능하도록 in을 이용한다.) gl_Position에 연결.
 5. pos를 불러오는 함수인 glVertexAttribLocation를 통해 변수이름으로 레퍼런스를 가져온다.
@@ -39,3 +38,13 @@
 5. 이 결과의 이유는 buffer[1]이 활성화(bind)되어있어서 이렇게된다.
 6. pos와 color각각 맞춰주려면 해당코드(bind, data)를 renderScene로 데려와야한다.
 7. VertexShader에 out v_Color를 추가하고 a_Color와 연결해주고, FragmentShader에 반드시 같은 이름의 out변수를 만들어준다.
+
+
+[실습4_ interleaved buffer 활용]
+
+1. 두개였던 vector를 하나로 합친다. 3개씩인걸 6개씩으로
+2. 버퍼는 하나로 다시 줄인다. 이렇게 만들면, renderScene에 있던 bind, data를 다시 main으로 데려올수 있다.
+3. glVertexAttribPointer를 조정해서 버퍼를 나눠서 쓸수있다.
+4. 각 변수에 값을 저장하게하면 끝. 물론 glDraw의 size도 조절해줘야한다.(몇개 그릴지)
+
+

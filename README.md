@@ -15,4 +15,17 @@
 
 [실습2_ 점 여러개 찍기]
 
-1. 
+1. Vertex 벡터로 찍을 점의 데이터를 만든다. vector<float> vertices{}
+2. VAO와 loadShader함수 사이에 VBO를 만든다gen, bind, data 수행
+  GLuint Buffer;
+  glGenBuffers(1, &Buffer);
+  glBindBuffer(GL_ARRAY_BUFFER, Buffer); 
+  glBufferData(GL_ARRAY_BUFFER, sizeof(float) * vertices.size(), vertices.data(), GL_DYNAMIC_DRAW); 
+
+3. MainLoop가 돌아가며 실행되는 renderScene에서 매 회마다 점의 위치가 갱신되도록 만들자.
+4. VertexShader에서 받을 점의 변수pos를 생성. (코드간 공유가 가능하도록 in을 이용한다.) gl_Position에 연결.
+5. pos를 불러오는 함수인 glVertexAttribLocation를 통해 변수이름으로 레퍼런스를 가져온다.
+6. glVertexAttribPointer로 포인터 생성(attrib, 개수, 인자형, 자료사이의 거리, offset)
+7. glEnableVertexAttribArray로 해당attrib 활성화.
+
+8. glClear후 glDrawArrays(type, start, pointNum)해주자 

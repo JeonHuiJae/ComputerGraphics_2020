@@ -55,3 +55,9 @@ glBufferData(GL_ARRAY_BUFFER, sizeof(float) * vertices.size(), vertices.data(), 
 3. vertices벡터를 잘 조정한다. (인덱스: vertices[], push: vertices.push_back(), pop: vertices.pop_back)
 4. line을 만들기 위해서는 draw함수의 type을 GL_LINES로 바꾸면 된다.
 5. line의 두께를 조절하려면, glLineWidth()함수 사용하면 된다.
+
++ Depth Buffer Function 활성화(Sort by Depth)
+glEnable(GL_DEPTH_TEST);
+glEnable(GL_DEPTH_FUNC);
+glDepthFunc(GL_LESS);
+glDepthRange(0.5, 1.0);

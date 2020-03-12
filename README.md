@@ -48,3 +48,10 @@ glBufferData(GL_ARRAY_BUFFER, sizeof(float) * vertices.size(), vertices.data(), 
 4. 각 변수에 값을 저장하게하면 끝. 물론 glDraw의 size도 조절해줘야한다.(몇개 그릴지)
 
 
+[실습5_ 마우스함수, 키보드함수]
+
+1. 마우스와 키보드 함수를 만든다 mouse(status, x, y), key(key, x, y)
+2. 함수를 등록한다. glulMouseFunc, key도
+3. vertices벡터를 잘 조정한다. (인덱스: vertices[], push: vertices.push_back(), pop: vertices.pop_back)
+4. line을 만들기 위해서는 draw함수의 type을 GL_LINES로 바꾸면 된다.
+5. line의 두께를 조절하려면, glLineWidth()함수 사용하면 된다.

@@ -1,2 +1,10 @@
 ﻿  ConsoleApplication3.cpp
+c:\users\힂\opengl_2020\opengl_test\consoleapplication3.cpp(228): warning C4305: '+=': 'double'에서 'GLfloat'(으)로 잘립니다.
+c:\users\힂\opengl_2020\opengl_test\consoleapplication3.cpp(232): warning C4305: '-=': 'double'에서 'GLfloat'(으)로 잘립니다.
+c:\users\힂\opengl_2020\opengl_test\consoleapplication3.cpp(236): warning C4305: '+=': 'double'에서 'GLfloat'(으)로 잘립니다.
+c:\users\힂\opengl_2020\opengl_test\consoleapplication3.cpp(240): warning C4305: '-=': 'double'에서 'GLfloat'(으)로 잘립니다.
+c:\users\힂\opengl_2020\opengl_test\consoleapplication3.cpp(244): warning C4305: '+=': 'double'에서 'GLfloat'(으)로 잘립니다.
+c:\users\힂\opengl_2020\opengl_test\consoleapplication3.cpp(248): warning C4305: '-=': 'double'에서 'GLfloat'(으)로 잘립니다.
+c:\users\힂\opengl_2020\opengl_test\consoleapplication3.cpp(252): warning C4305: '+=': 'double'에서 'GLfloat'(으)로 잘립니다.
+c:\users\힂\opengl_2020\opengl_test\consoleapplication3.cpp(256): warning C4305: '-=': 'double'에서 'GLfloat'(으)로 잘립니다.
   ConsoleApplication3.vcxproj -> C:\Users\힂\OpenGL_2020\openGL_test\Debug\ConsoleApplication3.exe

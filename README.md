@@ -68,3 +68,18 @@ glDepthRange(0.5, 1.0);
 1. 강의자료대로 좌표 데이터를 작성
 2. draw에서 GL_TRIANGLES로 수정
 3. 끝..
+
+
+[실습6_ 큐프 두개 그리고 움직이기]
+
+1. 데이터를 넣는다.(배열 vector로 고쳐서 사용)
+2. 큐브가 출력되는지 확인
+3. vertices데이터가 수정되지않으니 VBO관련 코드는 main으로 옮기고 draw를 두번한다.
+4. trans 행렬배열을 2개 생성(4X4단위행렬)
+5. VertexShader에서 uniform mat4 T 행렬 생성, T * pos로 곱해지도록 고치기
+6. q, w, a, z 누르면 transL를 조정, 반대쪽도. homogeneous coordinate 참고
+7. renderScene에서 glUniformMatrix4fv를 이용해 사용할 행렬 지정 + 그리기 두번 반복
+8. 움직이는거에 빨간색 칠하기는 해당 키를 누를때 왼, 오른 구분할 true false를 조정한다.
+9. 해당 큐브가 움직이는 중이라면, glDisableVertexAttribArray()를 이용해 원래 지정된 색을 죽이고 glVertexAttrib3f()를 이용해 빨강 지정
+10. 움직이는중이 아니라면, glEnableVertexAttribArray()로 다시 살려준다.
+

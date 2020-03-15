@@ -61,3 +61,10 @@ glEnable(GL_DEPTH_TEST);
 glEnable(GL_DEPTH_FUNC);
 glDepthFunc(GL_LESS);
 glDepthRange(0.5, 1.0);
+
+
+[실습5_ 삼각형 그리기]
+
+1. 강의자료대로 좌표 데이터를 작성
+2. draw에서 GL_TRIANGLES로 수정
+3. 끝..

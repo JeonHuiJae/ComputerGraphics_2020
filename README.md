@@ -83,3 +83,16 @@ glDepthRange(0.5, 1.0);
 9. 해당 큐브가 움직이는 중이라면, glDisableVertexAttribArray()를 이용해 원래 지정된 색을 죽이고 glVertexAttrib3f()를 이용해 빨강 지정
 10. 움직이는중이 아니라면, glEnableVertexAttribArray()로 다시 살려준다.
 
+
+[실습6_ 큐브 look-at 행렬기반 회전]
+
+1. glm 다운, C- ProgramFiles(x86) - MicrosoftSDKs - Windows - v7.1A - include 에 glm저장.
+2. #include<GLM/glm.h>인클루드
+3. MyMouse 활성화(glutMouseFunc)
+4. 마우스로 받은nx, ny를 이용해 lookat matrix 생성
+  - uz = vec3(nx, ny, 0)
+  - ux = cross(ux, vec3(0, 0, 1))
+  - uy = cross(ux, uz)
+  - M = vec4 M[4]
+  - M[0] = vec4(x, 0), M[1] = vec4(y, 0), M[2] = vec4(z, 0), M[3] = vec4(0, 0, 0, 1)
+5. glUniformMatrix4fv이용해서 VertexShader와 연결(mat4 R은 알아서 만들길)

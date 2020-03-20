@@ -5,10 +5,11 @@ in vec3 a_Color;
 out vec3 v_Color;
 
 uniform mat4 T;
+uniform mat4 R;
 
 void main()
 {
-    gl_Position = (T * vec4(pos, 1.0));
+    gl_Position = (T * R * vec4(pos, 1.0));
     gl_PointSize = 10.0;
 
 	v_Color = a_Color;

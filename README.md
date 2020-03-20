@@ -96,3 +96,12 @@ glDepthRange(0.5, 1.0);
   - M = vec4 M[4]
   - M[0] = vec4(x, 0), M[1] = vec4(y, 0), M[2] = vec4(z, 0), M[3] = vec4(0, 0, 0, 1)
 5. glUniformMatrix4fv이용해서 VertexShader와 연결(mat4 R은 알아서 만들길)
+
+
+[실습7_ index Buffer사용 출력]
+1. Buffer 크기 3으로 늘리기
+2. i, c, col vector추가, 데이터 생성
+3. 각각 Buffer의 방에 할당. 단, index Buffer는 GL_ELEMENT_ARRAY_BUFFER 지정
+4. 세부사항 조정(arrayPointer등)
+5. 주의할점 = buffer Bind 후 ArrayPointer지정 을 c, col에 대해 순서대로 해줘야함.  
+6. RenderScene에서는 큐브 두개 만드는부분, 빨간색 지정 부분을 제거, 깔끔하게 한다.
